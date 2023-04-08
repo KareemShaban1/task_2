@@ -1,66 +1,62 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+## Task 2
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Laravel Project that solve a specific problem with many test cases .....
 
-## About Laravel
+## Problem 
+Simply the task is to build a script to import large CSV data set into an SQL database of your choice,
+Here is a dataset "FIFA 23 complete player dataset" which contains information about male & female coaches, teams, and players.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+The dataset contains the following files:
+● female_coaches.csv
+● female_players.csv
+● female_players (legacy).csv
+● female_teams.csv
+● male_coaches.csv
+● male_players.csv
+● male_players (legacy).csv
+● male_teams.csv
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+You are required to import the data in (female_coaches.csv, female_players.csv, female_teams.csv, male_coaches.csv, male_players.csv, male_teams.csv) into the
+following DB tables
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+● teams
+● players
+● coaches
 
-## Learning Laravel
+For the tables schemas, you will need to add a column to store the sex of the row, for example, female_coaches.csv & male_coaches.csv files contain the same columns but they are separated into 2 files, you will import them into 1 table with an extra column sex.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Note: the task may be missing some details you must list the missing details and how you are gonna solve them.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+You have to write the script using Laravel.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+What are we focusing on
 
-## Laravel Sponsors
+● Code quality & maintainability
+● Naming conventions
+● Follow https://spatie.be/guidelines/laravel-php as your guideline
+● Write a README.md file that contains steps to install the project
+● When you are done push the code on a GitHub repo and reply with the link
+● The function body should not exceed 30 LOC.
+● Stick to DRY principles.
+● Base your implementation on design patterns.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Bouns
 
-### Premium Partners
+● Use docker through laravel/sail to run the project
+● Write unit tests for your code
+● Deploy on a server if you can, it's okay if you didn't
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+## How to install
 
-## Contributing
+- Download the project --OR-- Clone the repository with __git clone__
+- Download data from the in database/data/csv files.txt and place it in the same file
+- Copy __.env.example__ file to __.env__ and edit database credentials there 
+- Run __composer install__
+- Set the encryption key by executing  __php artisan key:generate__
+- Run __php artisan migrate --seed__ 
+- Start local server by executing __php artisan serve__ 
+- Open new terminal and navigate to the project root directory
+- Run php artisan command __php artisan import:data__ to import data from csv files to database 
+- Use Test Case class called ImportDataTest__ using PHPUnit
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- - - - -
