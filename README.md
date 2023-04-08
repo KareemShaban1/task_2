@@ -7,6 +7,7 @@ Simply the task is to build a script to import large CSV data set into an SQL da
 Here is a dataset "FIFA 23 complete player dataset" which contains information about male & female coaches, teams, and players.
 
 The dataset contains the following files:
+
     ● female_coaches.csv
     ● female_players.csv
     ● female_players (legacy).csv
