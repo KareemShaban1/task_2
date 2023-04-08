@@ -49,15 +49,15 @@ Bouns
 
 ## How to install
 
-- Download the project --OR-- Clone the repository with __git clone__
-- Download data from the in database/data/csv files.txt and place it in the same file
-- Copy __.env.example__ file to __.env__ and edit database credentials there 
-- Run __composer install__
-- Set the encryption key by executing  __php artisan key:generate__
-- Run __php artisan migrate --seed__ 
-- Start local server by executing __php artisan serve__ 
-- Open new terminal and navigate to the project root directory
-- Run php artisan command __php artisan import:data__ to import data from csv files to database 
-- Use Test Case class called ImportDataTest__ using PHPUnit
+    - Download the project --OR-- Clone the repository with __git clone__
+    - Download data from the in database/data/csv files.txt and place it in the same file
+    - Copy __.env.example__ file to __.env__ and edit database credentials there 
+    - Run __composer install__
+    - Set the encryption key by executing  __php artisan key:generate__
+    - Run __php artisan migrate --seed__ 
+    - Start local server by executing __php artisan serve__ 
+    - Open new terminal and navigate to the project root directory
+    - Run php artisan command __php artisan import:data__ to import data from csv files to database 
+    - Use Test Case class called ImportDataTest__ using PHPUnit
 
 - - - - -
